@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all-student-styles.css">
     <title>Student List</title>
 </head>
 <body>
-<div>
-    <h1>All Students:</h1>
-    <ul>
-        <li th:each="student : ${allStudent}">
-            <span th:text="${student}"></span>
-            <br>
-        </li>
-    </ul>
-</div>
-<div>
-    <a th:href="@{~/}">Register a student</a>
-</div>
+<table>
+    <tr>
+        <td>
+            <div id="2">
+                <h1>All Students:</h1>
+                <ul th:each="student : ${allStudent}">
+                    <li>
+                        <span th:text="${student}"></span>
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div id="1">
+                <a th:href="@{~/}">Register a student</a>
+            </div>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

@@ -45,7 +45,7 @@ public class MainController {
             temp.add(it.getSname() + " " + it.getRollno());
         }
 
-        model.addAttribute("allStudent", Arrays.asList(temp));
+        model.addAttribute("allStudent", temp);
         return "all-student";
     }
 }

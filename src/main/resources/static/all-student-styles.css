@@ -1,0 +1,84 @@
+body {
+    background-color: #111;
+    color: #0F0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #00F;
+}
+
+h1 {
+    color: #0F0;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+div {
+    margin: 20px;
+    padding: 20px;
+    background-color: #000;
+    border: 1px solid #0F0;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #0F0;
+    margin: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #0F0;
+}
+
+/* Additional styles for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Mr. Robot effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('mr-robot-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Styles for div id="1" (Register a student) */
+#1 {
+    background-color: #000;
+    color: #00F;
+    padding: 10px;
+    border: 1px solid #0F0;
+    text-align: center;
+}
+
+/* Styles for div id="2" (All Students) */
+#2 {
+    background-color: #111;
+    border: 1px solid #0F0;
+    padding: 20px;
+    margin: 10px 0;
+}
