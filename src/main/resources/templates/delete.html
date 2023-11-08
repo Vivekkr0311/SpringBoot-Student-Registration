@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="delete-styles.css">
+    <title>Delete Student Record</title>
+</head>
+<body>
+<div class="container">
+    <h1>Delete a Student Record</h1>
+    <form method="post" class="delete-form">
+        <div class="form-group">
+            <label for="rollNo">Roll No:</label>
+            <input type="text" id="rollNo" name="rollno" required>
+        </div>
+        <button type="submit" class="delete-button">Delete</button>
+    </form>
+
+    <div class="nav-links">
+        <div class="link">
+            <a th:href="@{~/}" class="register-link">Register a Student</a>
+        </div>
+        <div class="link">
+            <a th:href="@{~/all-student.html}" class="all-student-link">See All Students</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
