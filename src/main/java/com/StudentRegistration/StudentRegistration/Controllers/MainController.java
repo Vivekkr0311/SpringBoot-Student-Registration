@@ -30,16 +30,29 @@ public class MainController {
         return "student-registration";
     }
 
-//    @GetMapping(path = "/all")
-//    public @ResponseBody Iterable<Student> getAllStudents(@ModelAttribute Student student){
-//        for(Student it : studentRepository.findAll()){
-//            System.out.println(it.getSname() + " " + it.getRollno());
-//        }
-//        return studentRepository.findAll();
-//    }
-
     @GetMapping("/all-student.html")
     public String list(Model model){
+        List<String> temp = new ArrayList<>();
+        for(Student it : studentRepository.findAll()){
+            temp.add(it.getSname() + " " + it.getRollno());
+        }
+
+        model.addAttribute("allStudent", temp);
+        return "all-student";
+    }
+
+    @GetMapping("/delete")
+    public String delete(){
+
+        return "delete";
+    }
+
+    @PostMapping(path = "/delete")
+    public String deleteStudent(@ModelAttribute Student student, Model model){
+        System.out.println(student.toString());
+
+        studentRepository.deleteById(student.getRollno());
+
         List<String> temp = new ArrayList<>();
         for(Student it : studentRepository.findAll()){
             temp.add(it.getSname() + " " + it.getRollno());
